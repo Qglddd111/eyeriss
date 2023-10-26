@@ -1,0 +1,10 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/yanjiusheng/GNNacc/eyeriss/conv1_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv1_3
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'Out' is not allowed [E:/yanjiusheng/GNNacc/eyeriss/conv1_3.v:11]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'out_you' is not allowed [E:/yanjiusheng/GNNacc/eyeriss/conv1_3.v:12]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'out_youshang' is not allowed [E:/yanjiusheng/GNNacc/eyeriss/conv1_3.v:13]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/yanjiusheng/GNNacc/eyeriss/eyeriss_qgl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eyeriss_qgl
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'out1' is not allowed [E:/yanjiusheng/GNNacc/eyeriss/eyeriss_qgl.v:10]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/yanjiusheng/study/fpga/eyeriss_qgl/eyeriss_qgl.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

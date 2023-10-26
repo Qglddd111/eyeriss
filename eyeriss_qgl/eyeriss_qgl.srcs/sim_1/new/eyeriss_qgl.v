@@ -1,0 +1,290 @@
+///脉动阵列实现
+module eyeriss_qgl(
+    input clk,
+    input rst,
+    input CE,
+    input [64*48*8-1:0] image,
+    input [3*3*8-1:0] filter,
+    output reg[19:0] out1,out2,out3
+);
+///reg [19:0]out1,out2,out3;
+reg [48*8-1:0] row[63:0];
+generate
+    genvar i;
+    for(i=0;i<=63;i=i+1)
+        begin: rowrowrow
+            always @(posedge clk ) begin
+                    row[i]=image[(i+1)*48*8-1-:48*8];
+            end
+        end
+endgenerate
+reg [48*8-1:0] row_n[4:0];
+reg [5:0] cnt;
+reg [3:0]flag;
+always @(posedge clk ) begin
+    if(rst) begin
+        cnt<=1;
+        flag<=1;
+    end
+    else if(cnt==46) begin
+        cnt<=1;
+        flag<=flag+1;
+    end
+    else
+        cnt<=cnt+1;
+end
+always @(posedge clk ) begin
+    if(rst) begin
+        row_n[0]<=0;
+            row_n[1]<=0;
+            row_n[2]<=0;
+            row_n[3]<=0;
+            row_n[4]<=0;
+        end
+    else    case(flag)
+        1:begin
+            row_n[0]<=row[0];
+            row_n[1]<=row[1];
+            row_n[2]<=row[2];
+            row_n[3]<=row[3];
+            row_n[4]<=row[4];
+        end
+        2:begin
+            row_n[0]<=row[5];
+            row_n[1]<=row[6];
+            row_n[2]<=row[7];
+            row_n[3]<=row[8];
+            row_n[4]<=row[9];
+        end
+        3:begin
+            row_n[0]<=row[10];
+            row_n[1]<=row[11];
+            row_n[2]<=row[12];
+            row_n[3]<=row[13];
+            row_n[4]<=row[14];
+        end
+        4:begin
+            row_n[0]<=row[15];
+            row_n[1]<=row[16];
+            row_n[2]<=row[17];
+            row_n[3]<=row[18];
+            row_n[4]<=row[19];
+        end
+        5:begin
+            row_n[0]<=row[20];
+            row_n[1]<=row[21];
+            row_n[2]<=row[22];
+            row_n[3]<=row[23];
+            row_n[4]<=row[24];
+        end
+        6:begin
+            row_n[0]<=row[25];
+            row_n[1]<=row[26];
+            row_n[2]<=row[27];
+            row_n[3]<=row[28];
+            row_n[4]<=row[29];
+        end
+        7:begin
+            row_n[0]<=row[30];
+            row_n[1]<=row[31];
+            row_n[2]<=row[32];
+            row_n[3]<=row[33];
+            row_n[4]<=row[34];
+        end
+        8:begin
+            row_n[0]<=row[35];
+            row_n[1]<=row[36];
+            row_n[2]<=row[37];
+            row_n[3]<=row[38];
+            row_n[4]<=row[39];
+        end
+        9:begin
+            row_n[0]<=row[40];
+            row_n[1]<=row[41];
+            row_n[2]<=row[42];
+            row_n[3]<=row[43];
+            row_n[4]<=row[44];
+        end
+        10:begin
+            row_n[0]<=row[45];
+            row_n[1]<=row[46];
+            row_n[2]<=row[47];
+            row_n[3]<=row[48];
+            row_n[4]<=row[49];
+        end
+        11:begin
+            row_n[0]<=row[50];
+            row_n[1]<=row[51];
+            row_n[2]<=row[52];
+            row_n[3]<=row[53];
+            row_n[4]<=row[54];
+        end
+        12:begin
+            row_n[0]<=row[55];
+            row_n[1]<=row[56];
+            row_n[2]<=row[57];
+            row_n[3]<=row[58];
+            row_n[4]<=row[59];
+        end
+        13:begin
+            row_n[0]<=row[60];
+            row_n[1]<=row[61];
+            row_n[2]<=row[62];
+            row_n[3]<=row[63];
+            row_n[4]<=0;
+        end
+        default:begin
+            row_n[0]<=0;
+            row_n[1]<=0;
+            row_n[2]<=0;
+            row_n[3]<=0;
+            row_n[4]<=0;
+        end
+    endcase
+end
+reg [48*8-1:0] row3_wait1;
+reg [48*8-1:0] row4_wait1;
+reg [48*8-1:0] row4_wait2;
+always @(posedge clk ) begin
+    row3_wait1<=row_n[3];
+    row4_wait1<=row_n[4];
+    row4_wait2<=row4_wait1;
+end
+wire [3*3*8-1:0]w1,w2,w3;
+assign w1=filter[3*8-1:0];
+assign w2=filter[6*8-1-:24];
+assign w3=filter[9*8-1-:24];
+
+reg [3*8-1:0]shift_in[4:0];
+always @(posedge clk) begin
+    if(rst) begin
+        shift_in[0]<=0;
+        shift_in[1]<=0;
+        shift_in[2]<=0;
+        shift_in[3]<=0;
+        shift_in[4]<=0;
+    end
+    else begin
+        shift_in[0]<=row_n[0][(cnt+2)*8-1-:3*8];
+        shift_in[1]<=row_n[1][(cnt+2)*8-1-:3*8];
+        shift_in[2]<=row_n[2][(cnt+2)*8-1-:3*8];
+        shift_in[3]<=row3_wait1[(cnt+2)*8-1-:3*8];
+        shift_in[4]<=row4_wait2[(cnt+2)*8-1-:3*8];
+    end
+end
+wire [17:0]out1_1,out1_2,out1_3,out2_1,out2_2,out2_3,out3_1,out3_2,out3_3;
+wire [23:0]in1_1_1,in1_1_2,in1_1_3,in1_2_1,in1_2_2,in1_2_3,in1_3_1,in1_3_2,in1_3_3;
+wire [23:0]in2_1_1,in2_1_2,in2_1_3,in2_2_1,in2_2_2,in2_2_3,in2_3_1,in2_3_2,in2_3_3;
+assign in1_1_1=w1;
+assign in1_2_1=w2;
+assign in1_3_1=w3;
+assign in2_1_1=shift_in[0];
+assign in2_2_1=shift_in[1];
+assign in2_3_1=shift_in[2];
+assign in2_3_2=shift_in[3];
+assign in2_3_3=shift_in[4];
+conv1_3 mine11(
+    .CLK(clk),
+    .RST(rst),
+    .CE(CE),
+    .IN1(in1_1_1),
+    .IN2(in2_1_1),
+    .Out(out1_1),
+    .out_you(in1_1_2),
+    .out_youshang()
+);
+conv1_3 mine12(
+    .CLK(clk),
+    .RST(rst),
+    .CE(CE),
+    .IN1(in1_1_2),
+    .IN2(in2_1_2),
+    .Out(out1_2),
+    .out_you(in1_1_3),
+    .out_youshang()
+);
+conv1_3 mine13(
+    .CLK(clk),
+    .RST(rst),
+    .CE(CE),
+    .IN1(in1_1_3),
+    .IN2(in2_1_3),
+    .Out(out1_3),
+    .out_you(),
+    .out_youshang()
+);
+conv1_3 mine21(
+    .CLK(clk),
+    .RST(rst),
+    .CE(CE),
+    .IN1(in1_2_1),
+    .IN2(in2_2_1),
+    .Out(out2_1),
+    .out_you(in1_2_2),
+    .out_youshang(in2_1_2)
+);
+conv1_3 mine22(
+    .CLK(clk),
+    .RST(rst),
+    .CE(CE),
+    .IN1(in1_2_2),
+    .IN2(in2_2_2),
+    .Out(out2_2),
+    .out_you(in1_2_3),
+    .out_youshang(in2_1_3)
+);
+conv1_3 mine23(
+    .CLK(clk),
+    .RST(rst),
+    .CE(CE),
+    .IN1(in1_2_3),
+    .IN2(in2_2_3),
+    .Out(out2_3),
+    .out_you(),
+    .out_youshang()
+);
+conv1_3 mine31(
+    .CLK(clk),
+    .RST(rst),
+    .CE(CE),
+    .IN1(in1_3_1),
+    .IN2(in2_3_1),
+    .Out(out3_1),
+    .out_you(in1_3_2),
+    .out_youshang(in2_2_2)
+);
+conv1_3 mine32(
+    .CLK(clk),
+    .RST(rst),
+    .CE(CE),
+    .IN1(in1_3_2),
+    .IN2(in2_3_2),
+    .Out(out3_2),
+    .out_you(in1_3_3),
+    .out_youshang(in2_2_3)
+);
+conv1_3 mine33(
+    .CLK(clk),
+    .RST(rst),
+    .CE(CE),
+    .IN1(in1_3_3),
+    .IN2(in2_3_3),
+    .Out(out3_3),
+    .out_you(),
+    .out_youshang()
+);
+always @(posedge clk ) begin
+    if(rst)begin
+        out1<=0;
+        out2<=0;
+        out3<=0;
+    end
+    else begin
+        out1<=out1_1+out2_1+out3_1;
+        out2<=out1_2+out2_2+out3_2;
+        out3<=out1_3+out2_3+out3_3;
+    end
+
+end
+
+endmodule

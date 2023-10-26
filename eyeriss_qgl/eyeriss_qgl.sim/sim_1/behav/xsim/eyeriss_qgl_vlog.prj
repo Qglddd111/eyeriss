@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../../../GNNacc/eyeriss/conv1_3.v" \
+"../../../../../../../GNNacc/eyeriss/eyeriss_qgl.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

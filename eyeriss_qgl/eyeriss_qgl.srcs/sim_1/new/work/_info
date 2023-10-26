@@ -1,0 +1,87 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/Qua/xiang/lsd
+vconv1_3
+!i10b 1
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!s100 Xh>JlB:375WMj<KAl87aQ3
+IMC_oj2@G]Z8jnI9]:Bk2f1
+Z1 dE:/yanjiusheng/study/fpga/eyeriss_qgl/eyeriss_qgl.srcs/sim_1/new
+w1696425058
+8E:/yanjiusheng/study/fpga/eyeriss_qgl/eyeriss_qgl.srcs/sim_1/new/conv1_3.v
+FE:/yanjiusheng/study/fpga/eyeriss_qgl/eyeriss_qgl.srcs/sim_1/new/conv1_3.v
+L0 1
+Z2 OL;L;10.4;61
+!s108 1696425476.101000
+!s107 E:/yanjiusheng/study/fpga/eyeriss_qgl/eyeriss_qgl.srcs/sim_1/new/conv1_3.v|
+!s90 -reportprogress|300|-work|work|-novopt|-stats=none|E:/yanjiusheng/study/fpga/eyeriss_qgl/eyeriss_qgl.srcs/sim_1/new/conv1_3.v|
+!i113 1
+Z3 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+veyeriss_qgl
+!i10b 1
+R0
+r1
+!s85 0
+31
+!s100 i5ggI<Kz9KZ00LigJWMQ]1
+IVMJgfl8_jnjJ@UC3j4>N;0
+R1
+w1696425102
+8E:/yanjiusheng/study/fpga/eyeriss_qgl/eyeriss_qgl.srcs/sim_1/new/eyeriss_qgl.v
+FE:/yanjiusheng/study/fpga/eyeriss_qgl/eyeriss_qgl.srcs/sim_1/new/eyeriss_qgl.v
+L0 2
+R2
+!s108 1696425476.206000
+!s107 E:/yanjiusheng/study/fpga/eyeriss_qgl/eyeriss_qgl.srcs/sim_1/new/eyeriss_qgl.v|
+!s90 -reportprogress|300|-work|work|-novopt|-stats=none|E:/yanjiusheng/study/fpga/eyeriss_qgl/eyeriss_qgl.srcs/sim_1/new/eyeriss_qgl.v|
+!i113 1
+R3
+veyeriss_tb
+!i10b 1
+R0
+r1
+!s85 0
+31
+!s100 ?Hh2GKX3ndNHEBA[9E]_O0
+ILNHD<89`eMJHG2N8_D`Dz1
+R1
+w1696425455
+8E:/yanjiusheng/study/fpga/eyeriss_qgl/eyeriss_qgl.srcs/sim_1/new/eyeriss_tb.v
+FE:/yanjiusheng/study/fpga/eyeriss_qgl/eyeriss_qgl.srcs/sim_1/new/eyeriss_tb.v
+L0 23
+R2
+!s108 1696425476.310000
+!s107 E:/yanjiusheng/study/fpga/eyeriss_qgl/eyeriss_qgl.srcs/sim_1/new/eyeriss_tb.v|
+!s90 -reportprogress|300|-work|work|-novopt|-stats=none|E:/yanjiusheng/study/fpga/eyeriss_qgl/eyeriss_qgl.srcs/sim_1/new/eyeriss_tb.v|
+!i113 1
+R3
+vtb_chicken
+!s110 1696581335
+!i10b 1
+!s100 [R>9h4<iBil7?C^o<_;zI1
+I[`EYSiX`f8AZ^L56Sz4a<1
+R0
+R1
+w1696580821
+8E:/yanjiusheng/study/modelsim/tbxin.v
+FE:/yanjiusheng/study/modelsim/tbxin.v
+L0 2
+R2
+r1
+!s85 0
+31
+!s108 1696581335.048000
+!s107 E:/yanjiusheng/study/modelsim/tbxin.v|
+!s90 -reportprogress|300|-work|work|-novopt|-stats=none|E:/yanjiusheng/study/modelsim/tbxin.v|
+!i113 1
+R3

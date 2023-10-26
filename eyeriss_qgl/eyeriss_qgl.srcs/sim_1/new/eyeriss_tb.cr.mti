@@ -1,0 +1,22 @@
+E:/yanjiusheng/study/fpga/eyeriss_qgl/eyeriss_qgl.srcs/sim_1/new/eyeriss_qgl.v {1 {vlog -work work -novopt -stats=none E:/yanjiusheng/study/fpga/eyeriss_qgl/eyeriss_qgl.srcs/sim_1/new/eyeriss_qgl.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module eyeriss_qgl
+
+Top level modules:
+	eyeriss_qgl
+
+} {} {}} E:/yanjiusheng/study/fpga/eyeriss_qgl/eyeriss_qgl.srcs/sim_1/new/conv1_3.v {1 {vlog -work work -novopt -stats=none E:/yanjiusheng/study/fpga/eyeriss_qgl/eyeriss_qgl.srcs/sim_1/new/conv1_3.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module conv1_3
+
+Top level modules:
+	conv1_3
+
+} {} {}} E:/yanjiusheng/study/fpga/eyeriss_qgl/eyeriss_qgl.srcs/sim_1/new/eyeriss_tb.v {1 {vlog -work work -novopt -stats=none E:/yanjiusheng/study/fpga/eyeriss_qgl/eyeriss_qgl.srcs/sim_1/new/eyeriss_tb.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module eyeriss_tb
+
+Top level modules:
+	eyeriss_tb
+
+} {} {}}

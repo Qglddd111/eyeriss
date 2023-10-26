@@ -1,0 +1,338 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Oct  4 19:50:09 2023
+# Process ID: 10420
+# Current directory: E:/yanjiusheng/study/fpga/eyeriss_qgl/eyeriss_qgl.runs/synth_1
+# Command line: vivado.exe -log eyeriss_qgl.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source eyeriss_qgl.tcl
+# Log file: E:/yanjiusheng/study/fpga/eyeriss_qgl/eyeriss_qgl.runs/synth_1/eyeriss_qgl.vds
+# Journal file: E:/yanjiusheng/study/fpga/eyeriss_qgl/eyeriss_qgl.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source eyeriss_qgl.tcl -notrace
+Command: synth_design -top eyeriss_qgl -part xc7vx485tffg1157-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 18108 
+WARNING: [Synth 8-2611] redeclaration of ansi port Out is not allowed [E:/yanjiusheng/GNNacc/eyeriss/conv1_3.v:11]
+WARNING: [Synth 8-2611] redeclaration of ansi port out_you is not allowed [E:/yanjiusheng/GNNacc/eyeriss/conv1_3.v:12]
+WARNING: [Synth 8-2611] redeclaration of ansi port out_youshang is not allowed [E:/yanjiusheng/GNNacc/eyeriss/conv1_3.v:13]
+WARNING: [Synth 8-2611] redeclaration of ansi port out1 is not allowed [E:/yanjiusheng/GNNacc/eyeriss/eyeriss_qgl.v:10]
+WARNING: [Synth 8-2611] redeclaration of ansi port out2 is not allowed [E:/yanjiusheng/GNNacc/eyeriss/eyeriss_qgl.v:10]
+WARNING: [Synth 8-2611] redeclaration of ansi port out3 is not allowed [E:/yanjiusheng/GNNacc/eyeriss/eyeriss_qgl.v:10]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 385.035 ; gain = 112.859
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'eyeriss_qgl' [E:/yanjiusheng/GNNacc/eyeriss/eyeriss_qgl.v:2]
+INFO: [Synth 8-6157] synthesizing module 'conv1_3' [E:/yanjiusheng/GNNacc/eyeriss/conv1_3.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'conv1_3' (1#1) [E:/yanjiusheng/GNNacc/eyeriss/conv1_3.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'eyeriss_qgl' (2#1) [E:/yanjiusheng/GNNacc/eyeriss/eyeriss_qgl.v:2]
+WARNING: [Synth 8-3331] design conv1_3 has unconnected port CE
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 436.809 ; gain = 164.633
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 436.809 ; gain = 164.633
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx485tffg1157-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 436.809 ; gain = 164.633
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7vx485tffg1157-1
+INFO: [Synth 8-5546] ROM "flag" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 554.547 ; gain = 282.371
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------+------------+----------+
+|      |RTL Partition    |Replication |Instances |
++------+-----------------+------------+----------+
+|1     |eyeriss_qgl__GB0 |           1|     29199|
+|2     |eyeriss_qgl__GB1 |           1|     10373|
+|3     |eyeriss_qgl__GB2 |           1|     10373|
+|4     |eyeriss_qgl__GB3 |           1|     13323|
++------+-----------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     20 Bit       Adders := 3     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	              384 Bit    Registers := 72    
+	               24 Bit    Registers := 23    
+	               20 Bit    Registers := 3     
+	               18 Bit    Registers := 9     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module eyeriss_qgl 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     20 Bit       Adders := 3     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	              384 Bit    Registers := 72    
+	               24 Bit    Registers := 5     
+	               20 Bit    Registers := 3     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module conv1_3__1 
+Detailed RTL Component Info : 
++---Registers : 
+	               24 Bit    Registers := 2     
+	               18 Bit    Registers := 1     
+Module conv1_3__2 
+Detailed RTL Component Info : 
++---Registers : 
+	               24 Bit    Registers := 2     
+	               18 Bit    Registers := 1     
+Module conv1_3__3 
+Detailed RTL Component Info : 
++---Registers : 
+	               24 Bit    Registers := 2     
+	               18 Bit    Registers := 1     
+Module conv1_3__4 
+Detailed RTL Component Info : 
++---Registers : 
+	               24 Bit    Registers := 2     
+	               18 Bit    Registers := 1     
+Module conv1_3__5 
+Detailed RTL Component Info : 
++---Registers : 
+	               24 Bit    Registers := 2     
+	               18 Bit    Registers := 1     
+Module conv1_3__6 
+Detailed RTL Component Info : 
++---Registers : 
+	               24 Bit    Registers := 2     
+	               18 Bit    Registers := 1     
+Module conv1_3__7 
+Detailed RTL Component Info : 
++---Registers : 
+	               24 Bit    Registers := 2     
+	               18 Bit    Registers := 1     
+Module conv1_3__8 
+Detailed RTL Component Info : 
++---Registers : 
+	               24 Bit    Registers := 2     
+	               18 Bit    Registers := 1     
+Module conv1_3 
+Detailed RTL Component Info : 
++---Registers : 
+	               24 Bit    Registers := 2     
+	               18 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 2800 (col length:140)
+BRAMs: 2060 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "flag" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:46 . Memory (MB): peak = 905.281 ; gain = 633.105
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------+------------+----------+
+|      |RTL Partition    |Replication |Instances |
++------+-----------------+------------+----------+
+|1     |eyeriss_qgl__GB0 |           1|     29190|
+|2     |eyeriss_qgl__GB1 |           1|     10373|
+|3     |eyeriss_qgl__GB2 |           1|     10373|
+|4     |eyeriss_qgl__GB3 |           1|     21349|
++------+-----------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:47 . Memory (MB): peak = 905.281 ; gain = 633.105
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------+------------+----------+
+|      |RTL Partition    |Replication |Instances |
++------+-----------------+------------+----------+
+|1     |eyeriss_qgl__GB0 |           1|     29190|
+|2     |eyeriss_qgl__GB1 |           1|     10373|
+|3     |eyeriss_qgl__GB2 |           1|     10373|
+|4     |eyeriss_qgl__GB3 |           1|     21349|
++------+-----------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:01:00 . Memory (MB): peak = 905.281 ; gain = 633.105
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:01:05 . Memory (MB): peak = 905.281 ; gain = 633.105
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:01:06 . Memory (MB): peak = 905.281 ; gain = 633.105
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:01:08 . Memory (MB): peak = 905.281 ; gain = 633.105
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:01:08 . Memory (MB): peak = 905.281 ; gain = 633.105
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:01:39 . Memory (MB): peak = 905.281 ; gain = 633.105
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:01:39 . Memory (MB): peak = 905.281 ; gain = 633.105
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |   375|
+|3     |LUT1   |    14|
+|4     |LUT2   |   963|
+|5     |LUT3   |   225|
+|6     |LUT4   |   721|
+|7     |LUT5   |  4468|
+|8     |LUT6   |  7443|
+|9     |MUXF7  |  1224|
+|10    |FDRE   | 28283|
+|11    |FDSE   |    14|
+|12    |IBUF   | 24650|
+|13    |OBUF   |    60|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+----------+------+
+|      |Instance |Module    |Cells |
++------+---------+----------+------+
+|1     |top      |          | 68441|
+|2     |  mine11 |conv1_3   |   466|
+|3     |  mine12 |conv1_3_0 |   266|
+|4     |  mine13 |conv1_3_1 |   158|
+|5     |  mine21 |conv1_3_2 |   647|
+|6     |  mine22 |conv1_3_3 |   447|
+|7     |  mine23 |conv1_3_4 |   199|
+|8     |  mine31 |conv1_3_5 |   726|
+|9     |  mine32 |conv1_3_6 |   522|
+|10    |  mine33 |conv1_3_7 |   154|
++------+---------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:01:39 . Memory (MB): peak = 905.281 ; gain = 633.105
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:01:39 . Memory (MB): peak = 905.281 ; gain = 633.105
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:01:39 . Memory (MB): peak = 905.281 ; gain = 633.105
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 1599 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'eyeriss_qgl' is not ideal for floorplanning, since the cellview 'eyeriss_qgl' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 1065.664 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+15 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:02:03 . Memory (MB): peak = 1065.664 ; gain = 806.422
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 1065.664 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'E:/yanjiusheng/study/fpga/eyeriss_qgl/eyeriss_qgl.runs/synth_1/eyeriss_qgl.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1065.664 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file eyeriss_qgl_utilization_synth.rpt -pb eyeriss_qgl_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Oct  4 19:52:25 2023...
